@@ -1,0 +1,73 @@
+%inputs {
+    input,
+    textarea,
+    button {
+        background: rgba($color2, 0.1);
+        border-radius: $borde-radio;
+        border: $borde-grozor solid rgba($borde-color, 0.4);
+        color: $color2;
+        margin: 1rem 0;
+        font-size: 0.9rem;
+        padding: 0.3rem;
+        outline: none;
+    }
+    button{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+%noselecion{
+    &,&:focus{
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        outline-style: none; /* necesario para Internet Explorer */
+    }
+}
+
+%label{
+    font-size: 0.8rem;
+}
+%icon{
+    margin-left: 0.5rem;
+}
+%lista{
+    list-style: none;
+    a{
+        display: block;
+        text-decoration: none;
+    }
+}
+
+
+%creditos{
+    .creditos{
+        padding-top: 1.5rem;
+        width: 100%;
+    }
+    ul{
+        li{
+            font-size: 0.8rem;
+            margin: 0.2rem;
+            color: $color2;
+        }
+    }
+    @media screen and (min-width: 768px){
+        .creditos{
+            ul{
+                @include flexbox(row,center,flex-start);
+                li{
+                    list-style: none;
+                }
+                li:nth-child(2){
+                    border-left: 2px solid rgba($color2,0.4);
+                    border-right: 2px solid rgba($color2,0.4);
+                    padding: 0 0.8rem;
+                }
+            }
+        }
+    }
+}

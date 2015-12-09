@@ -1,0 +1,109 @@
+@mixin flexbox (
+        $direccion : row,
+        $alineacion : center,
+        $justificar : center,
+        $wrap : nowrap){
+    display: flex;
+    flex-direction: $direccion;
+    align-items: $alineacion;
+    justify-content: $justificar;
+    flex-wrap: $wrap;
+}
+
+
+
+
+
+
+
+
+// falta terminar
+// @mixin margen(
+//     $top:1rem,
+//     $left:1rem,
+//     $bottom:1rem,
+//     $rigth: 1rem) {
+//     margin-top: $top;
+//     margin-left: $
+// }
+
+
+// Aplicacion
+// @mixin border-circle {
+//     [class^="icon-"]{
+//         border-radius: 50%;
+//         border: 2px solid rgba(#fff,0.4);
+//         margin-right: 0.5rem;
+//         padding: 0.4rem;
+//         box-sizing: border-box;
+//     }
+// }
+
+
+
+@mixin texto(
+        $tmp1 : mayuscula,
+        $tmp2 : negrita,
+        $tmp3 : normal) {
+
+    @if $tmp1 == mayuscula or
+        $tmp2 == mayuscula or
+        $tmp3 == mayuscula {
+        text-transform: uppercase;
+    }
+    @if $tmp1 == minuscula or
+        $tmp2 == minuscula or
+        $tmp3 == minuscula {
+        text-transform: lowercase;
+    }
+    @if $tmp1 == primera or
+        $tmp2 == primera or
+        $tmp3 == primera {
+        text-transform: capitalize;
+    }
+    @if $tmp1 == cursiva or
+        $tmp2 == cursiva or
+        $tmp3 == cursiva {
+        font-style: italic;
+    }
+    @if $tmp1 == negrita or
+        $tmp2 == negrita or
+        $tmp3 == negrita {
+        font-weight: bold;
+    }
+}
+
+
+
+
+@mixin clip-path-img-diagonal(
+    $alto : 200, $esp-sobr : 50
+){
+    $posicion-trapecio : $alto - $esp-sobr;
+    $margen : $alto - ($esp-sobr * 2);
+
+    // aplicarlo al contenedor
+    .contenedor{
+        position: relative;
+        &>*{ height: #{$alto}px; }
+        .img-diagonal{
+            background: url('IMAGEN.jpg');
+            background-size: cover;
+        }
+    }
+
+    .cssclippathpolygon{
+        .img-diagonal{
+            // posicion
+            position: absolute;
+            top: #{$posicion-trapecio}px;
+            left: 0;
+
+            // fondo con clip-path
+            clip-path: polygon(0 0, 100% #{$esp-sobr}px, 100% #{$alto - $esp-sobr}px, 0% 100%);
+        }
+        .next-img-diagonal{
+            margin-top: #{$margen}px;
+        }
+    }
+}

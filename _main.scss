@@ -1,0 +1,27 @@
+// variables
+@import "colors";
+$font_size      : 16px    ;
+$esp_sep        : 4rem    ;
+$color1         : $blue   ;
+$color2         : white   ;
+$color-fondo    : #555    ;
+$borde-color    : $color2 ;
+$borde-grozor   : 2px     ;
+$borde-radio    : 0.3rem  ;
+
+// importaciones
+@import "mixins";
+@import "placeholder";
+@import "titulos";
+
+
+// propiedades generales
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    font-size: $font_size;
+    height: 100%;
+    width: 100%;
+}
