@@ -16,7 +16,7 @@
         padding-right: 0.5rem;
     }
 }
-%noselecion{
+%noselection{
     &,&:focus{
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -31,7 +31,7 @@
 %label{
     font-size: 0.8rem;
 }
-%icon{
+%margin-icon{
     margin-left: 0.5rem;
 }
 %lista{
