@@ -1,5 +1,5 @@
-/*  Rainbow
-    ========================================================================== */
+
+// colores generales
 $silver  : #dddddd;
 $gray    : #aaaaaa;
 $navy    : #001f3f;
@@ -17,42 +17,30 @@ $fuchsia : #f012be;
 $purple  : #b10dc9;
 
 
-/*  RGBA colours
-    ========================================================================== */
-$t-black  : rgba(0, 0, 0, 0.87);
-$tt-black : rgba(0, 0, 0, 0.54);
-$ttt-black   : rgba(0, 0, 0, 0.26);
-$tttt-black : rgba(0, 0, 0, 0.12);
-$t-white  : rgba(255, 255, 255, 0.87);
-$tt-white : rgba(255, 255, 255, 0.54);
+// colores claros
+$light-blue : #56a8b0;
+$light-green : #95c2b1;
+$light-red : #e35f5f;
+$light-yellow : #dec950;
+$light-orange : #e3975d;
+$light-pink : #e65e77;
+$light-brown : #ad7953;
+$light-gray : #a3a3a3;
 
 
-/*  Social colours
-    ========================================================================== */
-$fb: #2775e2;
+
+// colores de redes sociales
+$fb : #2775e2;
 $tw : #2bb4e8;
-$goo  : #dd4b39;
-$you  : #e14e42;
-$itg  : #417096;
+$goo : #dd4b39;
+$you : #c4302b;
+$itg : #417096;
 
 
-/*  Components colours
-    ========================================================================== */
+
+// colores de alertas
 $default: #e8e8e8;
 $error  : #cb5234;
 $warning: #edb431;
 $info   : #3aa3e3;
 $success: #2ab27b;
-
-
-
-// componentes light
-
-$light-blue: #56a8b0;
-$light-green: #95c2b1;
-$light-red: #e35f5f;
-$light-yellow: #dec950;
-$light-orange: #e3975d;
-$light-pink: #e65e77;
-$light-brown: #ad7953;
-$light-gray: #a3a3a3;

@@ -1,0 +1,37 @@
+// BOTONES
+
+// poner borde, sin fondo y no selecionable
+@mixin btn() {
+   background: rgba($color2, 0.1);
+   border-radius: 0.3rem;
+   border: $borde-grozor solid $color2;
+   color: $color2;
+   font-size: 1rem;
+   outline: none;
+   padding-left: 0.5rem;
+   padding-right: 0.5rem;
+}
+
+
+// EFECTOS DE CLICK EN BOTON
+// click abajo
+@mixin click-down($distance : 1px) {
+   &:active{
+      transform: translateY($distance);
+   }
+}
+
+// click sombra interna
+@mixin click-inset($radius : 20px) {
+   $distance : $radius / 2;
+   &:active{
+      box-shadow: inset 0px $distance $radius rgba(0, 0, 0, 0.35);
+   }
+}
+
+// click empequeñecer
+@mixin click-shrink($distance : 0.92) {
+   &:active{
+      transform: scale($distance);
+   }
+}

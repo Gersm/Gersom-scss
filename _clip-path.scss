@@ -1,0 +1,36 @@
+// CLIP PATH
+
+
+// terminar para que se adaptable sin un alto ni elementos definidos
+@mixin clip-path-img-diagonal(
+    $alto : 200, $esp-sobr : 50){
+
+
+    $posicion-trapecio : $alto - $esp-sobr;
+    $margen : $alto - ($esp-sobr * 2);
+
+    // aplicarlo al contenedor
+    .contenedor{
+        position: relative;
+        &>*{ height: #{$alto}px; }
+        .img-diagonal{
+            background: url('IMAGEN.jpg');
+            background-size: cover;
+        }
+    }
+
+    .cssclippathpolygon{
+        .img-diagonal{
+            // posicion
+            position: absolute;
+            top: #{$posicion-trapecio}px;
+            left: 0;
+
+            // fondo con clip-path
+            clip-path: polygon(0 0, 100% #{$esp-sobr}px, 100% #{$alto - $esp-sobr}px, 0% 100%);
+        }
+        .next-img-diagonal{
+            margin-top: #{$margen}px;
+        }
+    }
+}

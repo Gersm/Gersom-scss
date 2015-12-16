@@ -1,0 +1,15 @@
+// quitar viñetas y el sub rayado
+@mixin lista($margen-izq : true) {
+   @if $margen-izq {
+      padding-left: 0;
+   }
+   &>li{
+      list-style: none;
+      a{
+         display: block;
+         height: 100%;
+         text-decoration: none;
+         width: 100%;
+      }
+   }
+}
